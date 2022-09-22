@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My survey form</title>
+</head>
+<body>
+<h1>Survey about animals</h1>
+<p>Thank you for taking the time to help us improve our platform</p>
+<!-- Form with multiple choices about animals -->
+<form action="https://www.freecodecamp.com/email-submit">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Your email" required>
+    <label for="number">Age:</label>
+    <input type="number" id="number" name="number" min="10" max="99" placeholder="Your age" required>
+    <label for="dropdown">Which option best describes your current role?</label>
+    <select id="dropdown" name="dropdown">
+        <option value="student">Student</option>
+        <option value="full-time-job">Full time job</option>
+        <option value="full-time-learner">Full time learner</option>
+        <option value="prefer-not-to-say">Prefer not to say</option>
+        <option value="other">Other</option>
+    </select>
+    <label for="radio">Would you recommend freeCodeCamp to a friend?</label>
+    <input type="radio" id="definitely" name="radio" value="definitely">
+    <label for="definitely">Definitely</label>
+    <input type="radio" id="maybe" name="radio" value="maybe">
+    <label for="maybe">Maybe</label>
+    <input type="radio" id="not-sure" name="radio" value="not-sure">
+    <label for="not-sure">Not sure</label>
+    <label for="text">What is your favorite feature of freeCodeCamp?</label>
+    <textarea id="text" name="text" placeholder="Your answer" required></textarea>
+
+    <label for="datetime">When do you want your vacation?</label>
+    <input type="datetime-local" id="datetime" name="datetime" required>
+
+    <label for="color">What is your favorite color?</label>
+    <input type="color" id="color" name="color" required>
+    <!-- password input example only type="password" is actually needed rest is up to you -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <input type="submit" value="Submit">
+</form>
+<hr>
+<!-- simple name entry  -->
+<!-- action attribute is where the post/get request will be made using information
+on this form -->
+<form action="">
+    <!-- <label for="name">Name:</label> -->
+    <input type="text" id="name" name="name" placeholder="Enter Your name" required>
+    <input type="text" id="mylikes" name="mylikes">
+    <input type="submit" value="Press me to submit this form">
+</form>
+
+
+    
+</body>
+</html>
