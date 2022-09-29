@@ -1,0 +1,27 @@
+body {
+    /* generally you should delete unused styles */
+    /* font-family:'Courier New', Courier, monospace; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+main {
+    /* background-color: khaki; */
+    background-color: rgb(141, 128, 16);
+    /* background-color: #8d8010; */
+    /* background-color: hsl(54, 80%, 31%); */
+}
+
+/* applies to all articles */
+article {
+    background-color: aquamarine;
+}
+
+
+/* applies to all paragraphs */
+p {
+    font-size: 12px;
+    color:indigo;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
