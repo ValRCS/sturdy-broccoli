@@ -1,0 +1,107 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+.mydiv {
+    background-color: antiquewhite;
+    border: 2px solid darkslategrey;
+    /* margin will add space outside the border */
+
+
+}
+
+.myinline1 {
+    text-decoration: double underline;
+    font-weight: bold;
+    /* inline elements do not have width and height */
+    /* width: 200px;
+    height: 200px; */
+}
+
+.myinline2 {
+    /* we can change our element to inline-block */
+    display: inline-block;
+    /* display: block; */
+    /* now we can set width and height */
+    width: 200px;
+    height: 40px;
+    background-color: brown;
+}
+
+.myclass02 {
+    width: 300px;
+    height: 300px;
+    /* so block elements respect the width and height */
+}
+
+.myclass04 {
+    /* we can hide an element with display: none; */
+    display: none;
+}
+
+.myclass05 {
+    /* we can add margin to an element */
+    margin: 10px;
+    padding: 5px;
+}
+
+.myclass07 {
+    /* padding: 25px; */
+    /* padding: 25%; */
+    /* I can be more specific */
+    /* padding-top: 25px;
+        padding-bottom: 25px; */
+    padding-right: 25%;
+
+    padding-left: 25%;
+}
+
+/* there is inline-block element that is a mix of inline and block */
+/* it respects the width and height */
+
+.bigbox {
+    width: 300px;
+    height: 300px;
+    background-color: blanchedalmond;
+    /* i set position to relative */
+    position: relative;
+    /* because I want to position my child element  using absolute positioning */
+}
+
+.smallboxes {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(88, 184, 184);
+    padding: 5px;
+    border: 3px solid rgb(8, 14, 14);
+    margin: 7px;
+    /* inline-block elements respect the width and height */
+    /* display: inline-block; */
+}
+
+.box2 {
+    /* position fixed will position the element relative to the browser window */
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}
+
+.box3 {
+    /* absolute positioning */
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.box4 {
+    position: relative;
+    /* generally we use relative positioning for small adjustments */
+    /* top: -500px;
+    left: 190px; */
+    right: 10px;
+    bottom: 8px;
+    /* no point in using top and bottom at the same time, or left and right at the same time :) */
