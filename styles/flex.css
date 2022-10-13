@@ -1,0 +1,60 @@
+.my-flex-parent-container {
+    min-height: 500px;
+    background-color: aquamarine;
+  display: flex;
+  /* now all DIRECT children of this container will be flex items */
+  /* default direction is row */
+  /* flex-direction: row; */
+/* if you want your children to wrap, use flex-wrap */
+    flex-wrap: wrap;
+
+    /* to justify content on main axis, use justify-content */
+    /* justify-content: space-around; */
+    justify-content: center;
+
+    /* to align items on cross axis, use align-items */
+    /* align-items: flex-start; */
+    align-items: center;
+    /* align-items: flex-end; */
+
+    /* to align content on cross axis, use align-content 
+    this is useful when you have more than one row */
+    /* align-content: center; */
+    /* align-content: space-around; */
+    align-content: space-between;
+
+  /* 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center; */
+}
+
+.child {
+    width: 100px;
+    /* if you do not like squeezing, you can set a min-width */
+    min-width: 100px;
+    height: 100px;
+    background-color: bisque;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.child03 {
+    min-width: 150px;
+    min-height: 150px;
+}
+
+.child05 {
+    min-height: 120px;
+}
+
+.child04 {
+    background-color: rgb(116, 80, 26);
+    /* you can change the order of flex items */
+    /* generally, you want to keep the order in which they appear in the html */
+    /* in front of all other children */
+    /* order: -100;  */
+    /* order: 100;  */
+    /* behind all other children */
+}
