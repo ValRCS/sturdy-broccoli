@@ -1,0 +1,64 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 60px 2fr 60px 1fr;
+    grid-template-rows: 50px 1fr 1fr;
+}
+
+.grid-child {
+    background-color: aquamarine;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.also-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 50px;
+    /*
+    The grid template area names are yours to decide
+    use . to indicate empty cells
+    */
+    grid-template-areas: 
+        "header header header header"
+        "main    main   .     sidebar"
+        "footer footer footer footer";
+}
+
+.also-child {
+    background-color: bisque;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+/* 
+We can indicate where an item should start and end by using grid-column-start, grid-column-end, grid-row-start, and grid-row-end.
+ */
+ /* 
+ Here I am writing that I want main article to start at line 2 and end at line 4.
+ For both columns and rows
+ */
+
+.top-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+}
+
+.main-article {
+    grid-area: main;
+    /* grid-column: 2 / 4;
+    grid-row: 2 / 4; */
+}
+
+.side-article {
+    grid-area: sidebar;
+    /* grid-column: 1 / 2;
+    grid-row: 2 / 4; */
+}
+
+.end-content {
+    grid-area: footer;
+    /* grid-column: 2 / 4;
+    grid-row: 1 / 2; */
+}
