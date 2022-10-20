@@ -12,7 +12,8 @@
 
 .also-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: 20% 35% 25% 20%;
     grid-template-rows: 1fr 1fr 50px;
     /*
     The grid template area names are yours to decide
@@ -20,7 +21,7 @@
     */
     grid-template-areas: 
         "header header header header"
-        "main    main   .     sidebar"
+        ".      main    main        sidebar"
         "footer footer footer footer";
 }
 
@@ -53,6 +54,10 @@ We can indicate where an item should start and end by using grid-column-start, g
 
 .side-article {
     grid-area: sidebar;
+    /* grid-column is 
+    grid-column-start and grid-column-end
+    at the same time
+    */
     /* grid-column: 1 / 2;
     grid-row: 2 / 4; */
 }
