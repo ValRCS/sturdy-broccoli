@@ -1,0 +1,91 @@
+.boxy {
+    background-color: #e5d1d1;
+    border: 1px solid #100101;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+
+}
+
+/* psuedo class */
+.boxy:hover {
+    background-color: #d8197f;
+}
+
+.box-03:hover {
+    /* scale 1.2 times */
+    /* transform: scale(1.2); */
+    transform: scale(1.05);
+
+    box-shadow: 8px 7px 13px 10px rgba(112,32,32,0.18);
+    /* some years ago you had to use -webkit- prefixes for different browsers */
+/* -webkit-box-shadow: 8px 7px 13px 10px rgba(112,32,32,0.18);
+-moz-box-shadow: 8px 7px 13px 10px rgba(112,32,32,0.18); */
+
+}
+
+.box-04:hover {
+    /* rotate 10 degrees */
+    transform: rotate(10deg);
+}
+
+.box-05:hover {
+    /* skew 10 degrees */
+    transform: skew(10deg);
+    /* there is also skewX and skewY */
+    /* documentation: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skew */
+}
+
+.box-01:hover {
+    /* slow down the transition */
+    transition: all 2s;
+    transform: scale(0.5);
+    /* we can change the way transition happens */
+    /* transition-timing-function: ease-in; */
+}
+
+.box-02:hover {
+    /* box-shadow example */
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.another-box {
+    width: 200px;
+    height: 200px;
+    background-color: #d8197f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* i define the name of the animation */
+    animation: spin 10s linear infinite;
+    /* only one animation can be applied to an element at a time */
+    /* animation: colorchange 5s linear infinite; */
+}
+
+/* i define the animation so spin has to match spin here the name i came up with */
+@keyframes spin {
+    /* from 0% to 100% */
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* so with alternate we can change the direction of the animation  back and forth */
+
+.outer-box {
+    animation: colorchange 5s linear alternate infinite; 
+}
+
+@keyframes colorchange {
+    /* from 0% to 100% */
+    from {
+        background-color: #d8197f;
+    }
+    to {
+        background-color: #e5d1d1;
+    }
+}
