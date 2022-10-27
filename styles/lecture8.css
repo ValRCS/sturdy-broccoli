@@ -109,3 +109,14 @@ going mobile-first from lowest width to highest */
      background-color: orange;
     }
  }
+
+ /* typical breakpoints */
+    /* 320px - 480px: Smartphones (portrait) */
+    /* 480px - 768px: Smartphones (landscape) */
+    /* 768px - 1024px: Tablets (portrait) */
+    /* 1024px - 1280px: Tablets (landscape) */
+    /* 1280px - 1440px: Laptops, Desktops */
+    /* 1440px - 2560px: Large Screens, TV */
+    
+
+ /* we would use max-width if we start with highest width and go down */
