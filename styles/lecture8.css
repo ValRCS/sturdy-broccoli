@@ -89,3 +89,23 @@
         background-color: #e5d1d1;
     }
 }
+
+/* add media queries
+going mobile-first from lowest width to highest */
+@media (min-width: 400px) {
+   .box-container {
+    background-color: aquamarine;
+   }
+}
+
+@media (min-width: 600px) {
+   .box-container {
+    background-color: blueviolet;
+   }
+}
+
+@media (min-width: 992px) {
+    main {
+     background-color: orange;
+    }
+ }
