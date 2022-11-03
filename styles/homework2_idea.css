@@ -1,0 +1,65 @@
+.container  {
+    background-color: antiquewhite;
+    display: grid;
+    /* define columns and rows */
+    grid-template-columns: 350px;
+    grid-template-rows: 100px 100px 100px 50px;
+    /* name the areas */
+    grid-template-areas: 
+    "myheader" 
+    "mymain" 
+    "ad" 
+    "myfooter";
+}
+
+.box {
+    background-color: aqua;
+}
+
+/* media quarries for tabled */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 350px 350px;
+        grid-template-rows: 100px 100px 100px;
+        /* change the areas */
+        grid-template-areas:
+        "myheader myheader"
+        "mymain ad"
+        "myfooter myfooter";
+        
+    }
+}
+
+/* media quarries for desktop */
+@media (min-width: 992px) {
+    .container {
+        grid-template-columns: 350px 1fr 350px;
+        grid-template-rows: 100px 100px 100px;
+        /* update the areas */
+        grid-template-areas:
+        "myheader myheader myheader"
+        "mymain mymain ad"
+        "myfooter myfooter myfooter";
+    }
+}
+
+/* name boxes */
+.box-01 {
+    grid-area: myheader;
+    background-color: darkkhaki;
+}
+
+.box-02 {
+    grid-area: mymain;
+    background-color: darkmagenta;
+}
+
+.box-03 {
+    grid-area: ad;
+    background-color: darkgreen
+}
+
+.box-04 {
+    grid-area: myfooter;
+    background-color: darkorange;
+}
