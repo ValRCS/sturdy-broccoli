@@ -1,0 +1,19 @@
+/* simple style */
+
+/* box sizing reset */
+
+* {
+    box-sizing: border-box;
+}
+
+/* body */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* main */
+
+main {
+    background-color: rgb(141, 128, 16);
+}
