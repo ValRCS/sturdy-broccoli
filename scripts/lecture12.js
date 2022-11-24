@@ -159,6 +159,7 @@ function main() {
     //we are passing the function as a parameter
     //as our number of event listeners grows we can move them to separate functions
     //something like addEventListeners(); //TODO
+    //TODO there are other ways of adding event listeners
 }
 
 //a good practice is to have main called when document is loaded
