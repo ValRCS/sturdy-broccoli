@@ -93,6 +93,30 @@ function add2(a = 2, b = 3) {
     return a + b;
 };
 
+//functions can be anonymous
+
+let myFun = function() {
+    console.log("Hello from anonymous function");
+} //this is an anonymous function assigned to a variable
+
+//there are also arrow functions
+//arrow functions are anonymous functions
+//arrow functions are a bit shorter and more compact
+//arrow functions do not have their own this, arguments, super, or new.target
+
+//arrow functions are a good way to write anonymous functions
+
+let myArrowFun = (a,b,c) => a+b+c; //this is an arrow function assigned to a variable
+//above function will return the sum of a, b and c
+//arrow functions were added in ES6 in 2015
+
+//you can also have arrow functions that do not take any parameters
+let myArrowFun2 = () => { console.log("just a simple arrow function"); };
+
+function resetDocument() {  //this is a function that resets the document
+    console.log("resetting document");
+    document.body.style.backgroundColor = 'white'; //this is a global variable that represents the body of the document
+;}
 
 function main() {
     //we can call other functions from here
@@ -112,11 +136,43 @@ function main() {
     console.log(`The result of adding 2 and 3 is ${result}`);
     result = add2(10, 20); //uses provided values
     console.log(`The result of adding 10 and 20 is ${result}`);
-
+    myFun(); //calling the anonymous function
+    let myResult = myArrowFun(1,2,3); //calling the arrow function
+    console.log(`The result of my arrow function is ${myResult}`);
+    myArrowFun2(); //calling the arrow function without parameters
     //you could have a cleanup function that would clean up after the program is done
+    //click event - we use an anonymous function to handle the click event
+    const btn = document.querySelector('button');
+    btn.addEventListener('click', () => {
+    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    document.body.style.backgroundColor = rndCol;
+  });
+
+    const boomBtn = document.querySelector('.big-boom');
+    boomBtn.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'black';
+    });
+
+    //we can pass an existing function to our event listener
+    const resetBtn = document.querySelector('.reset-btn');
+    resetBtn.addEventListener('click', resetDocument); //notice we are not calling the function, 
+    //we are passing the function as a parameter
+    //as our number of event listeners grows we can move them to separate functions
+    //something like addEventListeners(); //TODO
 }
 
-main(); //we call the main function to start the program so we have a single entry point
+//a good practice is to have main called when document is loaded
+//for this we use an event listener
+
+//so add main to the event listener
+
+//so this is the actual place where we call the main function
+document.addEventListener('DOMContentLoaded', main); //this will call main when document is loaded
+//instead of main we could have passed any other function
+//this approach works well even without defer in the script tag
+//more about DOMContentLoaded here https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event
+
+// main(); //we call the main function to start the program so we have a single entry point
 
 //using above approach our variables are local to the function and we do not have to worry about them being overwritten
 
@@ -153,3 +209,22 @@ main(); //we call the main function to start the program so we have a single ent
 
 // function that is longer than screen height is usually a sign of a problem. 
 //If a function does everything in one go, then it’s difficult to understand what it does and to reuse individual parts of its body.
+
+//why would we use anonymous functions?
+
+//we can use anonymous functions to pass them as parameters to other functions
+//often we use anonymous functions to handle events - we will talk more about events later
+
+//idea behind anonymous functions is that we can create a function on the fly and pass it to another function
+
+//https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
+
+
+
+function random(number) {
+  return Math.floor(Math.random() * (number+1));
+}
+
+
+
+//usually we will have a function to add multiple event listeners
