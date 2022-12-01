@@ -107,3 +107,146 @@ const textInput = document.querySelector('#myTextBox');
 
 //so let's attach the same function to the input event
 textInput.addEventListener('input', handleTextInputChange);
+
+//lets make a function to display sum of two numbers
+function displaySum() {
+    //get the two input fields
+    // const number1 = document.querySelector('#firstNumber'); //select by id
+    // const number2 = document.querySelector('#secondNumber');
+    //lets handle unlimited number of inputs by refactoring the code
+    const numberInputs = document.querySelectorAll('.numeric-input'); //select by class
+    //get sum of all the numbers
+    let sum = 0;
+    //we can use for loop to iterate over the numberInputs
+    for (let i = 0; i < numberInputs.length; i++) {
+       sum += Number(numberInputs[i].value);
+    }
+    //get the result paragraph
+    const resultParagraph = document.querySelector('.number-sum'); //selecting by class
+    //calculate the sum
+    // const sum = parseInt(number1.value) + parseInt(number2.value);
+    //display the sum
+    resultParagraph.innerText = `The sum is ${sum}`;
+}
+
+//lets attach this function to document load event
+
+//we can use the addEventListener method
+document.addEventListener('DOMContentLoaded', displaySum);
+//so we changed the content of result paragraph when the page is loaded
+//mdn docs on DOMContentLoaded event
+//https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event
+
+//even better would be to have a main function that will call all the other functions when document is loaded
+
+//now how to attach displaySum to my numeric inputs?
+//i could use id for both inputs and attach the function to the change event
+//but this is not very good because if i have more inputs i would need to attach the function to each input
+//better would be to use a class for both inputs and attach the function to the change event
+
+//so let's do that
+
+//first we need to get the inputs
+
+const numberNodeList= document.querySelectorAll('.numeric-input'); //this will return a NodeList not Array
+//so we need to convert it to an array
+//we can use Array.from method
+const numberArray = Array.from(numberNodeList); //we could have done this in one line but this is more readable
+//now we have an array of inputs
+//we can use for of loop to iterate over the array
+console.log("Let's add input handlers to numeric inputs");
+for (const numberInput of numberArray) {
+    //log the id of the input
+    console.log(`The id of the input is ${numberInput.id}`);
+    // numberInput.addEventListener('change', displaySum); //this fires when the focus is lost
+    //how about firing the function when the input changes immediately?
+    numberInput.addEventListener('input', displaySum);
+};
+
+//lets make a function to change background color of our page from the 3 sliders
+function changeBackgroundColor() {
+    //get the 3 sliders
+    const redSlider = document.querySelector('#redSlider');
+    const greenSlider = document.querySelector('#greenSlider');
+    const blueSlider = document.querySelector('#blueSlider');
+    //get the background color paragraph
+    const backgroundColorParagraph = document.querySelector('.background-color');
+    //get the background color div
+    const backgroundColorDiv = document.querySelector('.background-color-div');
+    //get the values of the sliders
+    const red = redSlider.value;
+    const green = greenSlider.value;
+    const blue = blueSlider.value;
+    //display the values in the paragraph
+    backgroundColorParagraph.innerText = `The background color is rgb(${red}, ${green}, ${blue})`;
+    //change the background color of the div
+    backgroundColorDiv.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+}
+
+//lets attach changeBackgroundColor to the change event of the sliders
+//lets get all 3 color-input inputs
+
+const colorInputs = document.querySelectorAll('.color-input');
+//we can use for of loop to iterate over the colorInputs
+for (const colorInput of colorInputs) {
+    //log id of the input
+    console.log(`The id of the input that we are attaching listener is ${colorInput.id}`);
+    //colorInput.addEventListener('change', changeBackgroundColor); //again this is fired when the focus is lost
+    //we can use input event to fire the function when the input changes
+    colorInput.addEventListener('input', changeBackgroundColor);
+}
+
+//lets make a function to handle changes in color picker
+function handleColorPickerChange(event) {
+    console.log("Color picker changed");
+    console.log(event.target.value);
+    //get the background color div
+    const backgroundColorDiv = document.querySelector('.color-pick-paragraph');
+    //change the background color of the div
+    backgroundColorDiv.style.backgroundColor = event.target.value;
+}
+
+//we can attach the listener to the change event
+const colorPicker = document.querySelector('#myColorPicker');
+colorPicker.addEventListener('change', handleColorPickerChange);
+
+//let's handle changes in the checkbox
+function handleCheckboxChange(event) {
+    console.log("Checkbox changed");
+    console.log(event.target.checked);
+    //get the checkbox
+    const checkbox = document.querySelector('#myCheckbox');
+    //get the paragraph
+    const checkboxParagraph = document.querySelector('.checkbox-paragraph');
+    //display the value of the checkbox in the paragraph
+    checkboxParagraph.innerText = `The checkbox is ${checkbox.checked}`;
+}
+
+//again lets attach the listener to the change event
+const checkbox = document.querySelector('#myCheckbox');
+checkbox.addEventListener('change', handleCheckboxChange);
+
+//let's  handle changes in date picker
+function handleDateChange(event) {
+    console.log("Date changed");
+    console.log(event.target.value);
+    //get the date picker
+    const datePicker = document.querySelector('#myDateInput');
+    //get the paragraph
+    const dateParagraph = document.querySelector('.date-paragraph');
+    //display the value of the date picker in the paragraph
+    dateParagraph.innerText = `The date is ${datePicker.value}`;
+}
+
+//again lets attach the listener to the change event
+const datePicker = document.querySelector('#myDateInput');
+datePicker.addEventListener('change', handleDateChange);
+
+
+//so using event listeners is a type of asynchronous programming
+//we pass functions to the event listeners and they are called when the event happens
+//we can also use event listeners to handle events that are not related to the DOM like the load event
+
+//TODO for students
+//explore other input types and make a function to handle changes in them
+//https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input

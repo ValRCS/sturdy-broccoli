@@ -26,6 +26,40 @@
     <p class="name-length">Your name length is: 0</p>
     <p>Let's make a button to uppercase my text</p>
     <button id="myUppercaseButton">Uppercase</button>
+    <p>Let's add some more inputs</p>
+    <label for="firstNumber">Enter a number</label>
+    <input class="numeric-input" type="number" id="firstNumber" placeholder="Enter a number" value="45" min="-10" max="100">
+    <label for="secondNumber">Enter another number</label>
+    <input class="numeric-input" type="number" id="secondNumber" placeholder="Enter another number" value="20" min="-20" max="300">
+    <label for="thirdNumber"></label>
+    <input class="numeric-input" type="number" id="thirdNumber" placeholder="Enter another number" value="0" min="-50" max="1000">
+    <p>Let's add a slider</p>
+    <input class="numeric-input" type="range" id="mySlider" min="0" max="100" value="50">
+    <p class="number-sum">Sum of your numbers is: </p>
+    <div class="background-color-div">Lets add 3 sliders to change color of this element</div>
+    <p class="background-color">Color values</p>
+
+    <label for="redSlider">RED</label>
+    <input class="color-input" type="range" id="redSlider" min="0" max="255" value="0">
+    <label for="greenSlider">GREEN</label>
+    <input class="color-input" type="range" id="greenSlider" min="0" max="255" value="0">
+    <label for="blueSlider">BLUE</label>
+    <input class="color-input" type="range" id="blueSlider" min="0" max="255" value="0">
+
+    <p class="color-pick-paragraph">We use pick colors quite often so there is a specific input for colors</p>
+    <label for="myColorPicker">Pick a color</label>
+    <input type="color" id="myColorPicker" value="#ff0000">
+
+    <p>Let's add a checkbox</p>
+    <label for="myCheckbox">Check me</label>
+    <input type="checkbox" id="myCheckbox">
+    <p class="checkbox-paragraph">State of checkbox</p>
+
+    <p>Let's add a date input </p>
+    <label for="myDateInput">Pick a date</label>
+    <input type="date" id="myDateInput" value="2022-12-01">
+    <p class="date-paragraph">Your Target Date is:</p>
+
     <main>
         <h2 class="h2-headline">Browser Events</h2>
         <p>Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them in some way if desired. Your program can be said to be event-driven if it is designed to wait for events to occur rather than just plowing ahead with the computation.</p>
@@ -62,6 +96,10 @@
             <li>Dropdown</li>
             <li>...</li>
         </ul>
+        <p>Link to MDN page on browser events</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Events</a>
+        <p>Link to javascript.info on browser events</p>
+        <a href="https://javascript.info/introduction-browser-events">https://javascript.info/introduction-browser-events</a>
 
         <p>Each of these input types have their own events that can be listened for.</p>
         <p>For example:</p>
