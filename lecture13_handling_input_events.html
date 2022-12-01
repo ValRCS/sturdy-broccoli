@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 13</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="styles/simple.css">
+    <script src="scripts/lecture13.js" defer></script>
+</head>
+<body>
+    <h1>Lecture 13 - Handling Input Events using Javascript</h1>
+    <hr>
+    <p>Let's make some buttons</p>
+    <button id="myButton">Click Me!</button>
+    <button id="mySecondButton">Click me instead</button>
+    <p>Let's make a textbox with a label</p>
+    <label for="myTextBox">Enter your name</label>
+    <input type="text" id="myTextBox" placeholder="Enter your name">
+    <p class="name-length">Your name length is: 0</p>
+    <p>Let's make a button to uppercase my text</p>
+    <button id="myUppercaseButton">Uppercase</button>
+    <main>
+        <h2 class="h2-headline">Browser Events</h2>
+        <p>Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them in some way if desired. Your program can be said to be event-driven if it is designed to wait for events to occur rather than just plowing ahead with the computation.</p>
+        <p>In a web browser there are many different events that can fired/emmited by user actions and also external actions</p>
+        <p>For example:</p>
+        <ul>
+            <li>Clicking a button</li>
+            <li>Clicking a link</li>
+            <li>Hovering over an element</li>
+            <li>Pressing a key</li>
+            <li>Scrolling</li>
+            <li>Resizing the window</li>
+            <li>Submitting a form</li>
+            <li>...</li>
+        </ul>
+        <hr>
+        <h2>Event Listeners</h2>
+        <p>Event listeners are functions that are called when a specific event is fired. They are attached to a specific element and are called when the event is fired on that element.</p>
+        <p>For example, if you want to run a function when a button is clicked, you can add an event listener to the button that will run the function when the button is clicked.</p>
+        <p>Event listeners are added using the <code>addEventListener()</code> method. This method takes two arguments:</p>
+        <ul>
+            <li>The name of the event to listen for</li>
+            <li>The function to run when the event is fired</li>
+        </ul>
+        <hr>
+        <h2>Handling Input Events</h2>
+        <p>HTML has various input types</p>
+        <p>For example:</p>
+        <ul>
+            <li>Text input</li>
+            <li>Number input</li>
+            <li>Checkbox</li>
+            <li>Radio button</li>
+            <li>Dropdown</li>
+            <li>...</li>
+        </ul>
+
+        <p>Each of these input types have their own events that can be listened for.</p>
+        <p>For example:</p>
+        <ul>
+            <li>Text input - <code>input</code> event</li>
+            <li>Number input - <code>input</code> event</li>
+            <li>Checkbox - <code>change</code> event</li>
+            <li>Radio button - <code>change</code> event</li>
+            <li>Dropdown - <code>change</code> event</li>
+            <li>...</li>
+        </ul>
+    </main>
+</body>
+</html>
