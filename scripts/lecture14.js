@@ -71,11 +71,13 @@ function removeElement() {
     }
 }
 
+
 //lets make a function to remove all elements
-function removeAllElements() {
+function removeAllElementsFromParent(parentElement) {
     console.log("Removing all elements");
     //get the container element
-    const parentElement = document.getElementById("container");
+    //we do not need to get parent we have it incoming by parameter
+    // const parentElement = document.getElementById("container");
     //get the last child of the container
     //we need to use let since we will change the value of lastChild
     let lastChild = parentElement.lastElementChild;
@@ -90,6 +92,29 @@ function removeAllElements() {
     //we could have gotten only specific children and removed them using querySelectorAll
 }
 
+//lets make a function to remove all elements from container
+function removeAllElements() {
+    //get the container element
+    const parentElement = document.getElementById("container");
+    removeAllElementsFromParent(parentElement);
+}
+
+function destroyPage() {
+    //get the body element
+    const parentElement = document.body;
+    removeAllElementsFromParent(parentElement);
+    //lets make a button to reload the page
+    const reloadButton = document.createElement("button");
+    reloadButton.innerText = "Reload page";
+    //notice we create an anonymous function to be called when the button is clicked
+    reloadButton.addEventListener("click", function() {
+        location.reload();
+        //more on location: https://developer.mozilla.org/en-US/docs/Web/API/Location
+    });
+    //note we could have used an arrow function as well
+    //add button to the body
+    parentElement.appendChild(reloadButton);
+}
 
 //even better would be to add listeners when the page loads
 
@@ -111,6 +136,9 @@ function addListeners() {
     //add listener to remove all elements button
     const removeAllButton = document.getElementById("removeAllButton");
     removeAllButton.addEventListener("click", removeAllElements);
+    //lets add a listener to the destroy page button
+    const destroyPageButton = document.getElementById("destroyPageButton");
+    destroyPageButton.addEventListener("click", destroyPage);
 }
 
 function main() {

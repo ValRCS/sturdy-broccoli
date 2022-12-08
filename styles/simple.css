@@ -52,3 +52,7 @@ main {
 .new-element.odd {
     background-color: rgb(150, 210, 168);
 }
+
+#destroyPageButton {
+    background-color: red;
+}
