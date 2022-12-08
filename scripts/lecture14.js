@@ -33,9 +33,30 @@ function addElement() {
     //let's add a value attribute to the new element - not always required
     newElement.setAttribute("value", numElements+1); //that can be used to identify the element
 
+    //lets read addRandomColor from checkbox input 
+    //notice we use checked property to get the value of the checkbox as a boolean
+    const addRandomColor = document.getElementById("randomColor").checked;
+
+    //if random color is requested lets add it inline
+    //this will override the class we added in
+    if (addRandomColor === true) {
+        console.log("adding random color")
+        //lets add a random color
+        //we can use a random number generator to get a random color
+        //we can use the Math object to get a random number
+        //we can use the toString method to convert the number to a string
+        //we can use the padStart method to add leading zeros to the string
+        const randomColor = Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0");
+        //we can use the style property to set the background color
+        newElement.style.backgroundColor = "#" + randomColor;
+        //the above color will be more specific than the class we added in CSS
+    }
+
     //finally add the new element to the container
     parentElement.appendChild(newElement); //append adds to the end of the container element
 }
+
+
 
 //lets make a flexible function to add any number of elements
 function addElements(numElements) { 
@@ -50,7 +71,7 @@ function add10Elements() {
     addElements(10);
 }
 
-//TODO function that reads button value and adds that many elements - more universal solution
+
 
 
 
