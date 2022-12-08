@@ -29,6 +29,23 @@ function addElement() {
     parentElement.appendChild(newElement); //append adds to the end of the container element
 }
 
+//lets make a function to remove last element from our container
+
+function removeElement() {
+    //get the container element
+    const parentElement = document.getElementById("container");
+    //get the last child of the container
+    const lastChild = parentElement.lastElementChild;
+    //lets remove last child only when it exists
+    if (lastChild === null) {
+        console.log("No more elements to remove!");
+    } else {
+        //remove the last child
+        console.log("Removing last child: " + lastChild.innerText)
+        parentElement.removeChild(lastChild);
+    }
+}
+
 //even better would be to add listeners when the page loads
 
 //lets make a main function
@@ -42,6 +59,9 @@ function main() {
     //if we have many buttons we could make a separate function to add the listeners
     const addButton = document.getElementById("addButton");
     addButton.addEventListener("click", addElement);
+    //lets add a listener to the remove button
+    const removeButton = document.getElementById("removeButton");
+    removeButton.addEventListener("click", removeElement);
 }
 
 //lets attach main to the window load event
