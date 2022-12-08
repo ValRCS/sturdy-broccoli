@@ -17,3 +17,38 @@ body {
 main {
     background-color: rgb(232, 236, 209);
 }
+
+.cont {
+    /* lets make it flex wrap */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.new-element {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(184, 170, 170);
+    border: 1px solid rgb(26, 24, 24);
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+    margin: 5px;
+}
+
+/* lets add hover box shadow */
+/* you can design your own box shadow at various sites */
+/* for example https://www.cssmatic.com/box-shadow */
+
+.new-element:hover {
+    box-shadow: 0 0 5px 5px rgb(0, 0, 0);
+}
+
+/* lets create separate backgrounds for classes even and odd */
+
+.new-element.even {
+    background-color: rgb(207, 115, 115);
+}
+
+.new-element.odd {
+    background-color: rgb(150, 210, 168);
+}
