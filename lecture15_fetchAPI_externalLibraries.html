@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>CSS Libraries, Javascript Libraries, Fetch API</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- I could have downloaded the CSS and JS files and included them in my project without CDN -->
+    <!-- usually you would create a vendor folder and put the files there -->
+    <link rel="stylesheet" href="styles/lecture15.css">
+</head>
+<body>
+    <h1>External libraries and Fetch API</h1>
+    <hr>
+    <h2>External libraries</h2>
+    <p>There are two types of external libraries in web development:
+        Namely CSS libraries and Javascript libraries</p>
+        <p>Some libraries include both CSS and Javascript</p>
+    <p>External libraries are used to make our lives easier</p>
+    <p>Library means a code written by someone else(or many people) meant to be reused</p>
+    <p>External libraries are usually hosted on a server and we can include them in our code by using a link tag</p>
+    <p>There are also frameworks which provide a more rigid structure to your code</p>   
+    <p>The difference between a full framework and a library is not completely fixed</p>
+    <h3>CSS libraries</h3>
+    <p>Let's look at some examples of CSS libraries</p>
+    <p>Most popular CSS library is still Bootstrap</p>
+    <p>Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.</p>
+    <p>Home page for Bootstrap is <a href="https://getbootstrap.com/">GetBootstrap</a></p>
+    <p>Note: full Bootstrap also includes some JS for some effects</p>
+    <h3>Javascript libraries</h3>
+    <p>Let's look at some examples of Javascript libraries</p>
+    <hr>
+    <h3>Sample table</h3> 
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Anna</td>
+                <td>Smith</td>
+                <td>30</td>
+            </tr>
+            <tr class="my-row-style">
+                <td>Peter</td>
+                <td>Johnson</td>
+                <td>35</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h3>Sample Card</h3>
+    <div class="card" style="width: 18rem;">
+        <img src="pics/b_RTU_1_2022.2.jpg" class="card-img-top" alt="RTU">
+        <div class="card-body">
+          <h5 class="card-title">RTU</h5>
+          <p class="card-text">Riga Technical University is pretty fun!</p>
+          <a href="#" class="btn btn-primary">Go to official page</a>
+        </div>
+      </div>
+      <p>For more info on Bootstrap go to the Docs with examples</p>
+      <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">Docs</a>
+      <h2>Other CSS libraries</h2>
+      <p>There are many alternatives to Bootstrap</p>
+      <p>Some of them are:</p>
+      <ul>
+        <li><a href="https://bulma.io/">Bulma</a></li>
+        <li>Materialize</li>
+        <li>Foundation</li>
+        <li>W3.CSS</li>
+        <li><a href="https://tailwindcss.com/">Tailwind</a> - atomic CSS, some really like this approach</li>
+      </ul>
+    </body>
+</html>
